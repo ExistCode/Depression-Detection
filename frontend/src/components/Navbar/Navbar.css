@@ -1,0 +1,174 @@
+/* components/Navbar/Navbar.css */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray-600);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+
+.nav-link:hover {
+    color: var(--primary-dark);
+}
+
+.nav-link svg {
+    font-size: 1.1rem;
+}
+
+.nav-divider {
+    width: 1px;
+    height: 24px;
+    background-color: var(--gray-300);
+    margin: 0 0.5rem;
+}
+
+/* Add more spacing below navbar */
+.navbar-spacer {
+    height: 80px;
+    /* Increased spacing */
+}
+
+/* Main content container */
+.content-container {
+    padding-top: 2rem;
+    /* Additional top padding for content */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.navbar-user {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-dark);
+}
+
+.user-icon {
+    font-size: 1.2rem;
+    color: var(--primary-dark);
+}
+
+.user-email {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-dark);
+    border-radius: 50px;
+    background: transparent;
+    color: var(--primary-dark);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+    background: var(--primary-dark);
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navbar-container {
+        padding: 1rem;
+    }
+
+    .navbar-links {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    
+     user-email {
+        display: none;
+    }
+    
+    .logout-button span {
+        display: none;
+    }
+    
+    .logout-button {
+        padding: 0.5rem;
+    }
+    .navbar-links {
+        gap: 1rem;
+    }
+
+    .nav-link span {
+        display: none;
+        /* Hide text, show only icons */
+    }
+
+    .nav-divider {
+        margin: 0 0.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-user {
+        gap: 0.75rem;
+    }
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .navbar-links {
+        gap: 0.5rem;
+    }
+
+    .content-container {
+        padding: 1rem;
+    }
+}

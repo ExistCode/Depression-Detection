@@ -1,0 +1,248 @@
+/* ExplainableAI.css */
+.xai-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.xai-hero {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 100%);
+    border-radius: 24px;
+    padding: 3rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.xai-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-lighter);
+}
+
+.tags {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.xai-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.xai-card {
+    border-radius: 24px;
+    padding: 2rem;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.xai-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    margin-bottom: 1.5rem;
+}
+
+.icon-container {
+    font-size: 1.5rem;
+    color: var(--primary-dark);
+}
+
+.mint {
+    background-color: #D6FFE4;
+}
+
+.yellow {
+    background-color: #FFF3C7;
+}
+
+.pink {
+    background-color: #FFD6E4;
+}
+
+.blue {
+    background-color: #87CEFB;
+}
+
+.explanation-section {
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.explanation-section h2 {
+    color: var(--primary-dark);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.explanation-text {
+    font-size: 1.1rem;
+    color: var(--gray-600);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.methodology-section {
+    margin: 3rem 0;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.methodology-section h2 {
+    color: var(--primary-dark);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.methodology-text {
+    font-size: 1.1rem;
+    color: var(--gray-600);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.explanation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.explanation-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.explanation-item h3 {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.explanation-item p {
+    color: var(--gray-600);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Update the grid section in ExplainableAI.css */
+.xai-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.xai-card {
+    border-radius: 24px;
+    padding: 2.5rem;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-dark);
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: var(--gray-700);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.methodology-content {
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--gray-50);
+    border-radius: 16px;
+}
+
+.methodology-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: var(--gray-700);
+}
+
+@media (max-width: 768px) {
+    .xai-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .explanation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .methodology-section {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .xai-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .xai-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .xai-container {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .xai-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .xai-card {
+        min-height: 150px;
+    }
+}

@@ -1,0 +1,175 @@
+/* GDPRPolicy.css */
+.gdpr-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.gdpr-hero {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 100%);
+    border-radius: 24px;
+    padding: 3rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.hero-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.gdpr-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-lighter);
+}
+
+.gdpr-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.policy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.policy-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.policy-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+}
+
+.policy-card h3 {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+}
+
+.policy-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.policy-list li {
+    padding: 0.5rem 0;
+    color: var(--gray-600);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.policy-list li:before {
+    content: "•";
+    color: var(--primary-medium);
+    position: absolute;
+    left: 0;
+}
+
+.detailed-policy {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.detailed-policy h2 {
+    color: var(--primary-dark);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-lighter);
+}
+
+.policy-section {
+    margin-bottom: 2rem;
+}
+
+.policy-section h3 {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+}
+
+.policy-section ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.policy-section li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.policy-section li:before {
+    content: "→";
+    color: var(--primary-medium);
+    position: absolute;
+    left: -1.5rem;
+}
+
+.contact-box {
+    background: var(--gray-100);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.contact-button {
+    display: inline-block;
+    background: var(--primary-dark);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    background: var(--primary-medium);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+    .policy-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .gdpr-container {
+        padding: 1rem;
+    }
+
+    .gdpr-hero {
+        padding: 2rem;
+    }
+
+    .gdpr-hero h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .policy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .policy-card {
+        padding: 1.5rem;
+    }
+}

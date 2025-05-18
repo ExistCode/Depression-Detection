@@ -1,0 +1,24 @@
+# Virtual Environment
+.venv/
+Scripts/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Environment variables
+.env
+.env.yaml
+
+# Config
+config/firebase.config.json
+
+# Model files
+models/saved_model/assets/
+
+# IDE
+.idea/
+.vscode/
+
+# Vercel
+.vercel/

@@ -1,0 +1,113 @@
+./frontend/.env
+./python-model/.env
+./backend/.env
+
+# ================================
+# BACKEND RELATED GITIGNORE
+# ================================
+
+# Virtual Environment
+./backend/.venv/
+./backend/Scripts/
+
+# Python
+./backend/__pycache__/
+./backend/*.py[cod]
+
+# Environment variables
+./backend/.env.yaml
+
+# Config
+./backend/config/firebase.config.json
+
+# Model files
+./backend/models/saved_model/assets/
+
+# IDE
+./backend/.idea/
+./backend/.vscode/
+
+
+# ================================
+# FRONTEND RELATED GITIGNORE
+# ================================
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+./frontend/node_modules
+./frontend/.pnp
+./frontend/.pnp.js
+
+# testing
+./frontend/coverage
+
+# production
+./frontend/build
+
+# misc
+./frontend/.DS_Store
+./frontend/.env.local
+./frontend/.env.development.local
+./frontend/.env.test.local
+./frontend/.env.production.local
+
+./frontend/npm-debug.log*
+./frontend/yarn-debug.log*
+./frontend/yarn-error.log*
+
+# Ignore Firebase config
+./frontend/config/firebase_config.json
+
+./frontend/server/.venv/
+./frontend/server/server.env
+
+# ================================
+# Python eeg_depression_detection Model
+# ================================
+
+# Python
+./python-model/__pycache__/
+./python-model/*.py[cod]
+./python-model/$py.class
+./python-model/*.so
+./python-model/.Python
+./python-model/env/
+./python-model/build/
+./python-model/develop-eggs/
+./python-model/dist/
+./python-model/downloads/
+./python-model/eggs/
+./python-model/.eggs/
+./python-model/lib/
+./python-model/lib64/
+./python-model/parts/
+./python-model/sdist/
+./python-model/var/
+./python-model/wheels/
+./python-model/*.egg-info/
+.installed.cfg
+./python-model/*.egg
+
+# Jupyter Notebook
+./python-model/.ipynb_checkpoints
+
+# Virtual Environment
+./python-model/.venv/
+./python-model/venv/
+./python-model/ENV/
+
+# Project specific
+./python-model/capstone_env/
+./python-model/edf_dataset/
+./python-model/edf_dataset_2/
+./python-model/eeg_depression_detection/
+./python-model/output/
+# Ignore any zip files
+./python-model/*.zip
+
+# IDE
+./python-model/.idea/
+./python-model/.vscode/
+./python-model/*.swp
+./python-model/*.swo

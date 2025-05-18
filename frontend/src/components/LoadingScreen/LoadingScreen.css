@@ -1,0 +1,271 @@
+/* LoadingScreen.css */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(30, 40, 117, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.loading-card {
+    background: white;
+    border-radius: 24px;
+    padding: 3rem;
+    width: 90%;
+    max-width: 550px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.brain-icon {
+    font-size: 3.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+}
+
+/* 3D Siri-inspired Wave Animation */
+.wave-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 1.5rem auto;
+    border-radius: 50%;
+    background: var(--primary-lightest);
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(34, 52, 168, 0.2);
+    perspective: 800px;
+    transform-style: preserve-3d;
+}
+
+.wave-animation {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: container-pulse 4s infinite ease-in-out;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(34, 52, 168, 0.1),
+            rgba(34, 52, 168, 0.8));
+    border-radius: 38%;
+    transform-style: preserve-3d;
+    box-shadow: 0 0 15px rgba(34, 52, 168, 0.3) inset;
+}
+
+.wave1 {
+    animation: wave 8s linear infinite, glow 3s infinite alternate;
+    filter: blur(1px);
+}
+
+.wave2 {
+    animation: wave 10s linear infinite, glow 4s infinite alternate;
+    opacity: 0.7;
+    filter: blur(1.5px);
+}
+
+.wave3 {
+    animation: wave 12s linear infinite, glow 5s infinite alternate;
+    opacity: 0.5;
+    filter: blur(2px);
+}
+
+/* Add this to create a central glow effect */
+.wave-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 40%;
+    background: radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.8),
+            rgba(34, 52, 168, 0.3),
+            transparent);
+    border-radius: 50%;
+    filter: blur(5px);
+    animation: center-glow 3s infinite alternate;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes container-pulse {
+
+    0%,
+    100% {
+        transform: scale(0.95);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg) translateZ(0px);
+    }
+
+    100% {
+        transform: rotate(360deg) translateZ(20px);
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(34, 52, 168, 0.3),
+            0 0 10px rgba(34, 52, 168, 0.2) inset;
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgba(34, 52, 168, 0.6),
+            0 0 30px rgba(34, 52, 168, 0.4) inset;
+    }
+}
+
+@keyframes center-glow {
+    0% {
+        opacity: 0.4;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    100% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+.loading-card h2 {
+    color: var(--primary-dark);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.time-display {
+    margin: 1.5rem auto;
+    padding: 0.8rem 1.2rem;
+    background-color: var(--primary-lightest);
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(34, 52, 168, 0.1);
+}
+
+.elapsed-time-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary-medium);
+    margin-bottom: 0.3rem;
+}
+
+.elapsed-time-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-dark);
+    margin: 0;
+    font-family: monospace;
+}
+
+.loading-info {
+    margin-top: 1.5rem;
+    color: var(--gray-700);
+    line-height: 1.6;
+}
+
+.loading-info p {
+    margin: 0.7rem 0;
+}
+
+.warning-text {
+    color: #d32f2f;
+    font-weight: 500;
+    margin-top: 1rem !important;
+}
+
+.eeg-fact-container {
+    margin-top: 2rem;
+    padding: 1.2rem;
+    background-color: rgba(34, 52, 168, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-medium);
+    text-align: left;
+    transition: all 0.5s ease;
+}
+
+.eeg-fact-title {
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.eeg-fact {
+    color: var(--gray-700);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.error-message {
+    margin-top: 1.5rem;
+    color: #d32f2f;
+    padding: 1.2rem;
+    background-color: #ffebee;
+    border-radius: 12px;
+    border-left: 4px solid #d32f2f;
+}
+
+.retry-button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-medium);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.retry-button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.retry-button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .loading-card {
+        padding: 2rem;
+        width: 95%;
+    }
+
+    .wave-container {
+        width: 120px;
+        height: 120px;
+    }
+
+    .brain-icon {
+        font-size: 2.5rem;
+    }
+
+    .loading-card h2 {
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,348 @@
+/* Landing.css */
+.landing-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+/* Updated hero section styles */
+.hero {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-medium) 100%);
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.title-container h1 {
+    font-size: clamp(2rem, 5vw, 5rem);
+    color: white;
+    font-weight: 700;
+    
+}
+
+.darwin-text {
+    font-size: clamp(2rem, 5vw, 5rem);
+    font-weight: 700;
+    color: var(--primary-lighter);
+    height: auto;
+    display: flex;
+    align-items: top;
+    margin-bottom: 0.5rem;
+}
+
+.darwin-text .Typewriter {
+    height: auto;
+    display: flex;
+    align-items: top;
+}
+
+.system-name {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: var(--primary-lighter);
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+    margin-top: 0.5rem;
+}
+
+.hero-features {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.feature-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    color: white;
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.feature-tag:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.cta-button {
+    margin-top: 2rem;
+    background: var(--primary-lighter);
+    color: var(--primary-dark);
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-size: clamp(0.875rem, 1.5vw, 1.1rem);
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background: white;
+}
+
+
+
+
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+    min-height: 35vh;
+}
+
+.feature-card {
+    position: relative;
+    border-radius: 24px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feature-content {
+    text-align: left;
+}
+
+.feature-card h3 {
+    color: var(--primary-dark);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    color: var(--gray-500);
+    font-size: 0.9rem;
+}
+
+.arrow-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+.feature-card:hover .arrow-button {
+    transform: translateX(5px);
+}
+
+/* Card Colors */
+.mint {
+    background-color: #D6FFE4;
+}
+
+.mint .arrow-button {
+    background-color: #0D9488;
+}
+
+.yellow {
+    background-color: #FFF3C7;
+}
+
+.yellow .arrow-button {
+    background-color: #D97706;
+}
+
+.pink {
+    background-color: #FFD6E4;
+}
+
+.pink .arrow-button {
+    background-color: #DB2777;
+}
+
+.blue {
+    background-color: #87CEFB;
+}
+
+.blue .arrow-button {
+    background-color: #2234A8;
+}
+
+/* Hover effects */
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 2rem;
+    }
+
+    .hero-features {
+        gap: 0.75rem;
+    }
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-features {
+        justify-content: center;
+    }
+
+    .hero-image {
+        display: none;
+    }
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+        
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 1.5rem;
+        min-height: 60vh;
+    }
+
+    .title-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    
+    .title-container h1 {
+        font-size: 2rem;
+    }
+
+    .feature-tag {
+        padding: 0.5rem 1rem;
+    }
+
+    .hero-features {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .title-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+
+    .darwin-text {
+        font-size: 2.5rem;
+        height: 50px;
+    }
+
+    .darwin-text .Typewriter {
+        height: 50px;
+    }
+
+    .system-name {
+        font-size: 1rem;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 1rem;
+    }
+
+    .hero-content {
+        padding: 0.5rem;
+    }
+
+    .title-container {
+        margin-bottom: 0.5rem;
+    }
+
+    .system-name {
+        margin: 1rem 0;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .feature-tag {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cta-button {
+        width: 100%;
+        justify-content: center;
+        padding: 0.875rem 1.5rem;
+    }
+
+    .brand-name h1 {
+        font-size: 3.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.4rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .landing-container {
+        padding: 0.5rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+}

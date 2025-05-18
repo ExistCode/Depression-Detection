@@ -1,0 +1,194 @@
+/* DiagnosisUpload.css */
+.diagnosis-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.diagnosis-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.diagnosis-header h1 {
+    color: var(--primary-dark);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.diagnosis-header p {
+    color: var(--gray-600);
+    font-size: 1.1rem;
+}
+
+.diagnosis-form {
+    background: white;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-section {
+    padding: 2rem;
+    background: var(--gray-50);
+    border-radius: 16px;
+}
+
+.form-section h2 {
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: var(--gray-700);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-medium);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(34, 52, 168, 0.1);
+}
+
+.file-upload-area {
+    border: 2px dashed var(--gray-300);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.file-upload-area.drag-active {
+    border-color: var(--primary-medium);
+    background: rgba(34, 52, 168, 0.05);
+}
+
+.file-input {
+    display: none;
+}
+
+.file-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.file-label svg {
+    font-size: 2rem;
+    color: var(--primary-dark);
+}
+
+.file-format {
+    font-size: 0.9rem;
+    color: var(--gray-500);
+}
+
+.file-info {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--primary-lighter);
+    border-radius: 8px;
+    color: var(--primary-dark);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-200);
+}
+
+.primary-button,
+.secondary-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-button {
+    background: var(--primary-dark);
+    color: white;
+    border: none;
+}
+
+.secondary-button {
+    background: white;
+    color: var(--primary-dark);
+    border: 1px solid var(--primary-dark);
+}
+
+.primary-button:hover {
+    background: var(--primary-medium);
+    transform: translateY(-2px);
+}
+
+.secondary-button:hover {
+    background: var(--gray-50);
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .diagnosis-container {
+        padding: 1rem;
+    }
+
+    .diagnosis-form {
+        padding: 1rem;
+    }
+
+    .form-section {
+        padding: 1rem;
+    }
+}
