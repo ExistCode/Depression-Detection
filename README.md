@@ -131,6 +131,12 @@ REACT_APP_FIREBASE_PROJECT_ID=your_project_id
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+## Contributors
+- [Bonifacio Ronald](https://github.com/bonifacioronald)
+- [Gregorius Hans Andreanto](https://github.com/ExistCode)
+- [Lim Chuan Zhe](https://github.com/ehznauhcmil)
+- [Benjamin Tan Wei Keong](https://github.com/ben1115123)
+- [Richard Charlie Cahyono](https://github.com/Charliebzbz)
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
@@ -140,3 +146,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - MNE library for EEG signal processing
 - TensorFlow and PyTorch for machine learning capabilities
 - React and Flask communities for their excellent documentation
+- Mumtaz, Wajid (2016). MDD Patients and Healthy Controls EEG Data (New). figshare. Dataset. https://doi.org/10.6084/m9.figshare.4244171.v2
